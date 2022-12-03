@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+$dark_cyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+$very_dark_blue: hsl(212, 21%, 14%);
+$dark_grayish-blue: hsl(228, 12%, 48%);
+$white_color: hsl(0, 0%, 100%);
+$font_price_main: 'Fraunces', serif;
+$font_rest: 'Montserrat', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.container_card {
+  width: 375px;
+  height: 670px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  background-color: $cream;
+  padding: 30px 16px 27px;
+}
+.main_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  //   justify-content: center;
+  width: 340px;
+  height: 610px;
+  background-color: $white_color;
+  border-radius: 10px;
+}
+
+picture > img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.perfume {
+  padding: 25px;
+}
+.top {
+  letter-spacing: 6px;
+  color: $dark_grayish-blue;
+  font-family: $font_rest;
+}
+.product_name {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  line-height: 35px;
+  color: $very_dark_blue;
+  font-family: $font_price_main;
+  font-size: 2.5rem;
+}
+.description {
+  color: $dark_grayish-blue;
+  font-family: $font_rest;
+  font-size: 1.1rem;
+  line-height: 23px;
+  padding-bottom: 15px;
+}
+.price {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding-bottom: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.new_price {
+  font-family: $font_price_main;
+  color: $dark_cyan;
+  font-size: 2.5rem;
+}
+.old_price {
+  text-decoration: line-through;
+  color: $dark_grayish-blue;
+  font-size: 1.2rem;
+}
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 290px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: $dark_cyan;
+  color: $white_color;
+}
+button:hover {
+  background-color: $dark_grayish-blue;
+}
+@media only screen and (min-width: 1440px) {
+  .container_card {
+    width: 1440px;
+    height: 800px;
+    flex-direction: row;
+  }
+  .main_card {
+    flex-direction: row;
+    width: 610px;
+    height: 460px;
+  }
+  .perfume {
+    width: 50%;
+
+    padding: 35px 35px 30px;
+  }
+  picture {
+    height: 100%;
+  }
+  picture > img {
+    border-radius: 10px 0px 0px 10px;
+    height: 460px;
+  }
+
+  .price {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  button {
+    width: 235px;
+    height: 50px;
+  }
+  .product_name {
+    padding-top: 20px;
+    line-height: 33px;
+  }
+}
