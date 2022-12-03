@@ -130,9 +130,6 @@ button:hover {
     width: 50%;
     padding: 35px 35px 30px;
   }
-  picture {
-    height: 100%;
-  }
   picture > img {
     border-radius: 10px 0px 0px 10px;
     height: 460px;
